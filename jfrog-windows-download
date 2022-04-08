@@ -1,0 +1,7 @@
+jfrog windows download
+************************
+
+$url = "https://jfrog.zippyops.com:443/artifactory/labs/compose-file-v6/centos7.yml"
+$basicAuthvalue = "38dba771-fa24-44fe-a9e3-4299dc775fb4"
+$header = @{ Authorization = $basicAuthvalue }
+Invoke-WebRequest -Uri $url -Headers $header -Method "Get" -ContentType "application/zip" -UseBasicParsing -OutFile "C:\Users\zippyops\Desktop\centos7.yml"
